@@ -1,0 +1,18 @@
+{
+  "name": "workgit_test_cypress",
+  "version": "1.0.0",
+  "description": "automation test ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qa",
+    "automation"
+  ],
+  "author": "Mauricio Ceballos",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.7.0"
+  }
+}
