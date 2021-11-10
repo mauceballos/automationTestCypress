@@ -1,5 +1,7 @@
 {
   "userField": ".euiForm [data-test-subj='user-name']",
   "passwordField": ".euiForm [data-test-subj='password']",
-  "loginForm": ".euiForm"
+  "loginBtn": ".euiButtonContent",
+  "incorrectLoginBanner":"#error b",
+  "dashboardModal":"[data-test-subj='newsfeed']"
 }

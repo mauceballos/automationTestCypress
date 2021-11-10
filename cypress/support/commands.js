@@ -18,7 +18,7 @@ Cypress.Commands.add('login', (username, password) => {
         cy.get(login.passwordField)
         .focus()
         .type(password);
-        cy.get(login.loginForm).submit();
+        cy.get(login.loginBtn).click();
     })
   })
 //
