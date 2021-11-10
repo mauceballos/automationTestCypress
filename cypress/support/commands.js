@@ -10,7 +10,17 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (username, password) => { 
+    cy.fixture('loginWazuhManager').then((login) => {
+        cy.get(login.userField)
+        .focus()
+        .type(username);
+        cy.get(login.passwordField)
+        .focus()
+        .type(password);
+        cy.get(login.loginForm).submit();
+    })
+  })
 //
 //
 // -- This is a child command --
