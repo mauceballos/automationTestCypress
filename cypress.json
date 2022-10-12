@@ -1,4 +1,26 @@
 {
-    "baseUrl":"https://localhost",
-    "defaultCommandTimeout":90000
+    "baseUrl": "https://api.spacexdata.com/v3/rockets",
+    "defaultCommandTimeout": 90000,
+    "testFiles": [
+        "**/*.spec.js"
+    ],
+    "viewportWidth": 1400,
+    "viewportHeight": 1500,
+    "reporter": "mochawesome",
+    "watchForFileChanges": false,
+    "numTestsKeptInMemory": 0,
+    "reporterOptions": {
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report",
+        "mochaFile": "cypress/report/output.html"
+    },
+    "videosFolder": "cypress/report/video",
+    "screenshotsFolder": "cypress/report/screenshots",
+    "experimentalSessionAndOrigin": true,
+    "env": {
+        "type": "odfe"
+    }
 }

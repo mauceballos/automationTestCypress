@@ -5,7 +5,29 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/cypress open --config pageLoadTimeout=40000,baseUrl=https://localhost",
-    "start": "node_modules/.bin/cypress open"
+    "start": "npx cypress open ",
+    "cy:install": "npx cypress install --force"
+  },
+  "dependencies": {
+    "cosmiconfig": "^4.0.0",
+    "mocha": "^9.2.2",
+    "prettier": "^2.3.0"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.2",
+    "cypress-cucumber-preprocessor": "^4.0.3",
+    "cypress-real-events": "^1.7.1",
+    "cypress-xpath": "^1.6.2",
+    "eslint-plugin-cypress": "^2.11.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step-definitions/**/"
+  },
+  "engines": {
+    "node": "17.3.0"
   },
   "keywords": [
     "qa",
@@ -13,9 +35,6 @@
   ],
   "author": "Mauricio Ceballos",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^8.7.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mauceballos/automationTestCypress"
