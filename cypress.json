@@ -1,6 +1,7 @@
 {
-    "baseUrl": "https://api.spacexdata.com/v3/rockets",
+    "baseUrl": "https://csb-x6dpt1.netlify.app/",
     "defaultCommandTimeout": 90000,
+    "requestTimeout": 12000,
     "testFiles": [
         "**/*.spec.js"
     ],

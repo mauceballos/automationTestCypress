@@ -1,8 +1,4 @@
 /// <reference types="cypress" />
-// import { XPACK_PAGES_MAPPER } from "./mappers/xpack-pages-mapper";
-// import { ODFE_PAGES_MAPPER } from "./mappers/odfe-pages-mapper";
-// import { BASIC_PAGES_MAPPER } from "./mappers/basic-pages-mapper";
-// import { WZD_PAGES_MAPPER } from "./mappers/wzd-pages-mapper";
 
 export const clickElement = (selector) => {
   getElement(selector).should('not.be.disabled').click();
@@ -67,21 +63,6 @@ export const fillField = (selector, text) => {
 export const getElement = (selector) => {
   return cy.get(selector, { timeout: 8000 });
 };
-
-// export const getSelector = (name, page) => {
-//   switch (Cypress.env('type')) {
-//     case 'xpack':
-//       return XPACK_PAGES_MAPPER[page][name];
-//     case 'odfe':
-//       return ODFE_PAGES_MAPPER[page][name];
-//     case 'basic':
-//       return BASIC_PAGES_MAPPER[page][name];
-//     case 'wzd':
-//       return WZD_PAGES_MAPPER[page][name];
-//     default:
-//       return '';
-//   }
-// };
 
 export const getAvailableElement = (selector) => {
   return cy.get(selector).should('not.be.disabled');
